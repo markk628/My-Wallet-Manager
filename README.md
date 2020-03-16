@@ -23,16 +23,16 @@ Making sure the math adds up for the budget
 
 ## Skateboard
 
-User is able to add total budget
-User is able to add things they pay for
+User is able to create budget
+User is able to add expenses
 
 ## Bike
 
-Budget shows how much user is spending on what
+Do the math to show it in the pie chart
 
 ## Car
 
-Adding a pie chart
+Login feature
 
 ## Personal Achievement Goals:
 
