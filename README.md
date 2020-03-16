@@ -39,6 +39,10 @@ Login feature
 1. Make a working pie chart
 1. Implement working math to calculate budget
 
+## References
+
+The Gadget Book on youtube
+
 **Mark Kim                
 > Mark Kim / 03/16/20
 Adriana Gonzalez
