@@ -32,13 +32,12 @@ Budget shows how much user is spending on what
 
 ## Car
 
-pie chart
+Adding a pie chart
 
 ## Personal Achievement Goals:
 
 1. Make a working pie chart
 1. Implement working math to calculate budget
-1. 
 
 **Mark Kim                
 > Mark Kim / 03/16/20
