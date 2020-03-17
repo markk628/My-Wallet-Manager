@@ -6,10 +6,14 @@ target 'Budget' do
   use_frameworks!
 
   # Pods for Budget
+  
+pod 'Charts'
 
 pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
+
 
 end

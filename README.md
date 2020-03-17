@@ -42,6 +42,8 @@ Login feature
 ## References
 
 The Gadget Book on youtube
+IOSTutor on youtube
+Seemu Apps on youtube
 
 **Mark Kim                
 > Mark Kim / 03/16/20
