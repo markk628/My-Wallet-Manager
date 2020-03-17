@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,11 +53,97 @@
                         <outlet property="loginButton" destination="P6a-3e-ARI" id="P93-3A-iy5"/>
                         <outlet property="password" destination="rmk-LU-gSX" id="Qer-IL-ReM"/>
                         <outlet property="seg" destination="jdT-pw-igk" id="Oal-m5-ghG"/>
+                        <segue destination="n3Q-Tv-KnW" kind="show" identifier="loggedIn" id="beh-72-3co"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="116" y="137"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Eo-rB-RbO">
+            <objects>
+                <viewController id="IdC-A1-8zZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jmm-cm-Hru">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16b-Ib-LtN">
+                                <rect key="frame" x="154" y="257" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Expense 1"/>
+                                <connections>
+                                    <segue destination="1Io-jZ-mDl" kind="show" id="UFX-Md-3EW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDA-ww-1Yt">
+                                <rect key="frame" x="152" y="348" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Expense 2"/>
+                                <connections>
+                                    <segue destination="mGw-Xc-QVx" kind="show" id="5U2-je-0qu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="u2f-Te-2UM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sz3-kx-KBU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C32-Dh-LDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880.8" y="137.18140929535232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IJB-kk-nfS">
+            <objects>
+                <viewController id="1Io-jZ-mDl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j4H-N4-7wT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oYw-x1-srG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B50-SC-mHw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBw-jJ-1zV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871.1999999999998" y="-188.45577211394306"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="svy-qX-LeI">
+            <objects>
+                <viewController id="mGw-Xc-QVx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="REh-DT-thW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e94-DR-9vL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KTs-2P-rcB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IM8-Pe-wwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2911.1999999999998" y="573.46326836581716"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="02T-mD-Wro">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n3Q-Tv-KnW" customClass="MainNavigationController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Mqz-vb-17C"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7pU-ym-vJT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IdC-A1-8zZ" kind="relationship" relationship="rootViewController" id="Qhm-C8-Kyq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vU3-Xw-4Kt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941.60000000000002" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

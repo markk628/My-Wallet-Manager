@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		FE450A0924201FB100485782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0824201FB100485782 /* Assets.xcassets */; };
 		FE450A0C24201FB100485782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0A24201FB100485782 /* LaunchScreen.storyboard */; };
 		FE450A16242022B300485782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE450A15242022B300485782 /* GoogleService-Info.plist */; };
+		FE52322424203A2D004D8959 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52322324203A2D004D8959 /* MainNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FE450A0B24201FB100485782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE450A0D24201FB100485782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE450A15242022B300485782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FE52322324203A2D004D8959 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				7AE5B448AFAB613385961961 /* Pods-Budget.debug.xcconfig */,
 				0BF4B6001034AAABB6A7DBFC /* Pods-Budget.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				FE450A0824201FB100485782 /* Assets.xcassets */,
 				FE450A0A24201FB100485782 /* LaunchScreen.storyboard */,
 				FE450A0D24201FB100485782 /* Info.plist */,
+				FE52322324203A2D004D8959 /* MainNavigationController.swift */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 			files = (
 				FE450A0424201FAF00485782 /* ViewController.swift in Sources */,
 				FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */,
+				FE52322424203A2D004D8959 /* MainNavigationController.swift in Sources */,
 				FE450A0224201FAF00485782 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

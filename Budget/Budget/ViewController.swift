@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var seg: UISegmentedControl!
     @IBOutlet weak var email: UITextField!
@@ -35,7 +35,8 @@ class ViewController: UIViewController {
         } else {
             Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                 if error == nil {
-                    print("logged in")
+                    print("Logged in")
+                    self.performSegue(withIdentifier: "loggedIn", sender: self)
                 } else {
                     print("error")
                 }
@@ -56,7 +57,5 @@ class ViewController: UIViewController {
             }
         }
     }
-
-
 }
 
