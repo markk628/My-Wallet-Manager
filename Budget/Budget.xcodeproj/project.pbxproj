@@ -16,6 +16,7 @@
 		FE450A0C24201FB100485782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0A24201FB100485782 /* LaunchScreen.storyboard */; };
 		FE450A16242022B300485782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE450A15242022B300485782 /* GoogleService-Info.plist */; };
 		FE52322424203A2D004D8959 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52322324203A2D004D8959 /* MainNavigationController.swift */; };
+		FE523228242150AD004D8959 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE523227242150AD004D8959 /* Expenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FE450A0D24201FB100485782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE450A15242022B300485782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE52322324203A2D004D8959 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		FE523227242150AD004D8959 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				FE450A0124201FAF00485782 /* SceneDelegate.swift */,
 				FE450A15242022B300485782 /* GoogleService-Info.plist */,
 				FE450A0324201FAF00485782 /* ViewController.swift */,
+				FE523227242150AD004D8959 /* Expenses.swift */,
 				FE450A0524201FAF00485782 /* Main.storyboard */,
 				FE450A0824201FB100485782 /* Assets.xcassets */,
 				FE450A0A24201FB100485782 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE523228242150AD004D8959 /* Expenses.swift in Sources */,
 				FE450A0424201FAF00485782 /* ViewController.swift in Sources */,
 				FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */,
 				FE52322424203A2D004D8959 /* MainNavigationController.swift in Sources */,

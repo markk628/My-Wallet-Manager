@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Expenses View Controller-->
         <scene sceneID="9Eo-rB-RbO">
             <objects>
-                <viewController id="IdC-A1-8zZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpensesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IdC-A1-8zZ" customClass="ExpensesViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jmm-cm-Hru">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
