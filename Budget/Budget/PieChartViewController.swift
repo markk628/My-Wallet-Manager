@@ -8,7 +8,6 @@
 
 import UIKit
 import Charts
-import FirebaseFirestore
 
 class PieChartViewController: UIViewController{
     

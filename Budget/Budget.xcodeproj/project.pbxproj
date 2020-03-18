@@ -20,6 +20,7 @@
 		FEE16FDB2421C71700F00609 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */; };
 		FEE16FDD2421C86600F00609 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FDC2421C86600F00609 /* Expenses.swift */; };
 		FEE16FE12421CAE500F00609 /* CRUDExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE02421CAE500F00609 /* CRUDExpense.swift */; };
+		FEE16FE32422BE7200F00609 /* FireBaseFireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		FEE16FDC2421C86600F00609 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		FEE16FE02421CAE500F00609 /* CRUDExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDExpense.swift; sourceTree = "<group>"; };
+		FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseFireStoreService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */,
 				FEE16FDC2421C86600F00609 /* Expenses.swift */,
 				FEE16FE02421CAE500F00609 /* CRUDExpense.swift */,
+				FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */,
 				FEE16FD42421900600F00609 /* NSUIColor+Hex.swift */,
 				FE450A0524201FAF00485782 /* Main.storyboard */,
 				FE450A0824201FB100485782 /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE450A0424201FAF00485782 /* ViewController.swift in Sources */,
+				FEE16FE32422BE7200F00609 /* FireBaseFireStoreService.swift in Sources */,
 				FEE16FDB2421C71700F00609 /* ExpensesViewController.swift in Sources */,
 				FEE16FD52421900600F00609 /* NSUIColor+Hex.swift in Sources */,
 				FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */,
