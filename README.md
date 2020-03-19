@@ -47,6 +47,10 @@ I want to give a big thanks to these Youtubers 🦾
 *Seemu Apps
 *Sean Allen
 *Kilo Loco
+*Jared Davidson
+
+Websites
+*iOS App Templates
 
 **Mark Kim                
 > Mark Kim / 03/16/20

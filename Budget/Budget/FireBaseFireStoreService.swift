@@ -51,10 +51,7 @@ class FireBaseFireStoreService {
             } catch {
                 print(error)
             }
-            
-            
         }
-        
     }
     
     func update<T: Encodable & Identifiable>(for encodableObject: T, in collectionReference: FireBaseCollectionReference) {

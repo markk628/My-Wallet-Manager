@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Charts
 
 protocol Identifiable {
     var id: String? { get set }
