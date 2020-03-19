@@ -8,8 +8,18 @@
 
 import Foundation
 
-struct Expenses {
+protocol Identifiable {
+    var id: String? { get set }
+}
+
+struct Expenses: Codable, Identifiable {
     
+    var id: String? = nil
     let name: String
     var cost: Int
+    
+    init(name: String, cost: Int) {
+        self.name = name
+        self.cost = cost
+    }
 }

@@ -19,46 +19,64 @@ class FireBaseFireStoreService {
         FirebaseApp.configure()
     }
     
-//    let expenseReference = Firestore.firestore().collection("expenses")
-    
-    func create() {
-        
-        let expenseReference = Firestore.firestore().collection("expenses")
-
-        let parameters =
-        
-        expenseReference.addDocument(data: <#T##[String : Any]#>)
+    private func reference(to collectionReference: FireBaseCollectionReference) -> CollectionReference {
+        return Firestore.firestore().collection(collectionReference.rawValue)
     }
     
-    func read() {
-        
-        let expenseReference = Firestore.firestore().collection("expenses")
-        
-        expenseReference.addSnapshotListener { (snapshot, _) in
+    func create<T: Encodable>(for encodableObject: T, in collectionReference: FireBaseCollectionReference) {
+        do {
+            
+            let json = try encodableObject.toJson(excluding: ["id"])
+            reference(to: collectionReference).addDocument(data: json)
+            
+        } catch {
+            print(error)
+        }
+    }
+    
+    func read<T: Decodable>(from collectionReference: FireBaseCollectionReference, returning objectType: T.Type, completion: @escaping([T]) -> Void ) {
+        reference(to: collectionReference).addSnapshotListener { (snapshot, _) in
             
             guard let snapshot = snapshot else { return }
             
-            for document in snapshot.documents {
-                print(document.data())
+            do {
+                var objects = [T]()
+                for document in snapshot.documents {
+                    let object = try document.decode(as: objectType.self)
+                    objects.append(object)
+                }
+                
+                completion(objects)
+                
+            } catch {
+                print(error)
             }
+            
+            
         }
         
     }
     
-    func update() {
+    func update<T: Encodable & Identifiable>(for encodableObject: T, in collectionReference: FireBaseCollectionReference) {
         
-        let expenseReference = Firestore.firestore().collection("expenses")
-        
-        expenseReference.document("doc id").setData(<#T##documentData: [String : Any]##[String : Any]#>)
-
+        do {
+            let json = try encodableObject.toJson(excluding: ["id"])
+            guard let id = encodableObject.id else { throw MyError.encodingError }
+            
+            reference(to: collectionReference).document(id).setData(json)
+        } catch {
+            print(error)
+        }
         
     }
-    
-    func delete() {
+
+    func delete<T: Identifiable>(_ identifiableObject: T, in collectionReference: FireBaseCollectionReference) {
         
-        let expenseReference = Firestore.firestore().collection("expenses")
-        
-        expenseReference.document("doc id").delete()
-        
+        do {
+            guard let id = identifiableObject.id else { throw MyError.encodingError }
+            reference(to: collectionReference).document(id).delete()
+        } catch {
+            print(error)
+        }
     }
 }

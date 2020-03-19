@@ -11,17 +11,23 @@ import Charts
 
 class PieChartViewController: UIViewController{
     
+    var expenses = [Expenses]()
+        
     @IBOutlet weak var pieView: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpPieChart()
-    }
-    
+        }
+        
     func setUpPieChart() {
-                        
+        
         pieView.rotationAngle = 0
+        
+        FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
+            self.expenses = expenses
+            self.pieView.reloadData()
+        }
         
         var entries: [PieChartDataEntry] = Array()
         entries.append(PieChartDataEntry(value: 975.0, label: "851 Rent"))

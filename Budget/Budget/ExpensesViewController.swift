@@ -15,11 +15,16 @@ class ExpenseViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
+            self.expenses = expenses
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func addTapped() {
         CRUDExpense.createExpense(in: self) { expense in
-            print(expense)
+            FireBaseFireStoreService.shared.create(for: expense, in: .expenses)
         }
     }
     
@@ -42,12 +47,15 @@ class ExpenseViewController: UITableViewController {
         let expense = expenses[indexPath.row]
         
         CRUDExpense.updateExpense(expense, in: self) { updatedExpense in
-            print(updatedExpense)
+            FireBaseFireStoreService.shared.update(for: updatedExpense, in: .expenses)
         }
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
+        
+        let expense = expenses[indexPath.row]
+        FireBaseFireStoreService.shared.delete(expense, in: .expenses)
     }
     
 }

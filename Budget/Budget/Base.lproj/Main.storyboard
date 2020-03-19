@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.93964192160000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
-                                    <segment title="Login"/>
+                                    <segment title="Log In"/>
                                     <segment title="Register"/>
                                 </segments>
                             </segmentedControl>
@@ -37,13 +37,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6a-3e-ARI">
-                                <rect key="frame" x="168" y="350" width="38" height="30"/>
+                                <rect key="frame" x="136" y="350" width="103" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="👉👉👉"/>
                                 <connections>
                                     <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXj-cw-5nN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZe-bv-AoL">
+                                <rect key="frame" x="103" y="398" width="169" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.93964192160000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -53,12 +60,13 @@
                         <outlet property="loginButton" destination="P6a-3e-ARI" id="P93-3A-iy5"/>
                         <outlet property="password" destination="rmk-LU-gSX" id="Qer-IL-ReM"/>
                         <outlet property="seg" destination="jdT-pw-igk" id="Oal-m5-ghG"/>
+                        <outlet property="statusLabel" destination="wZe-bv-AoL" id="XfN-FA-TYM"/>
                         <segue destination="HJh-Kr-tOo" kind="show" identifier="loggedIn" id="hec-go-KBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782" y="137"/>
+            <point key="canvasLocation" x="781.60000000000002" y="136.28185907046478"/>
         </scene>
         <!--Pie Chart-->
         <scene sceneID="9Eo-rB-RbO">

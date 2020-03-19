@@ -32,10 +32,7 @@ class CRUDExpense {
                 let costString = alert.textFields?.last?.text,
                 let cost = Int(costString)
             else { return }
-            
-            print(name)
-            print(cost)
-            
+
             let expense = Expenses(name: name, cost: cost)
             completion(expense)
         }

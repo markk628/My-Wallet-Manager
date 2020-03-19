@@ -41,10 +41,12 @@ Login feature
 
 ## References
 
-The Gadget Book on Youtube
-IOSTutor on Youtube
-Seemu Apps on Youtube
-Sean Allen on Youtube
+I want to give a big thanks to these Youtubers 🦾
+*The Gadget Book
+*IOSTutor
+*Seemu Apps
+*Sean Allen
+*Kilo Loco
 
 **Mark Kim                
 > Mark Kim / 03/16/20

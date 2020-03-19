@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
     @IBAction func loginBtnPressed(_ sender: Any) {
         if seg.selectedSegmentIndex == 0 {
             login()
@@ -22,7 +23,6 @@ class LoginViewController: UIViewController {
             signUp()
         }
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +31,13 @@ class LoginViewController: UIViewController {
     
     func login() {
         if self.email.text == "" || self.password.text == "" {
-            print("enter sth")
+            statusLabel.text = "Enter Email/Password"
         } else {
             Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                 if error == nil {
-                    print("Logged in")
                     self.performSegue(withIdentifier: "loggedIn", sender: self)
                 } else {
-                    print("error")
+                    self.statusLabel.text = "Incorrect Email/Password"
                 }
             }
         }
@@ -46,13 +45,14 @@ class LoginViewController: UIViewController {
     
     func signUp() {
         if email.text == "" {
-            print("error")
+            statusLabel.text = "Enter Email/Password"
         } else {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
                 if error == nil {
-                    print("Signed up")
+                    self.statusLabel.text = "Signed Up"
+                    self.seg.selectedSegmentIndex = 0
                 } else {
-                    print("error")
+                    self.statusLabel.text = "Enter Email/Password"
                 }
             }
         }

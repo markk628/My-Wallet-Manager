@@ -21,6 +21,9 @@
 		FEE16FDD2421C86600F00609 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FDC2421C86600F00609 /* Expenses.swift */; };
 		FEE16FE12421CAE500F00609 /* CRUDExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE02421CAE500F00609 /* CRUDExpense.swift */; };
 		FEE16FE32422BE7200F00609 /* FireBaseFireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */; };
+		FEE16FE52422C37500F00609 /* FireBaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE42422C37500F00609 /* FireBaseCollectionReference.swift */; };
+		FEE16FE72422C55D00F00609 /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE62422C55C00F00609 /* EncodableExtension.swift */; };
+		FEE16FE92422CA2E00F00609 /* SnapShotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FE82422CA2E00F00609 /* SnapShotExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		FEE16FDC2421C86600F00609 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		FEE16FE02421CAE500F00609 /* CRUDExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDExpense.swift; sourceTree = "<group>"; };
 		FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseFireStoreService.swift; sourceTree = "<group>"; };
+		FEE16FE42422C37500F00609 /* FireBaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseCollectionReference.swift; sourceTree = "<group>"; };
+		FEE16FE62422C55C00F00609 /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		FEE16FE82422CA2E00F00609 /* SnapShotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				FEE16FDC2421C86600F00609 /* Expenses.swift */,
 				FEE16FE02421CAE500F00609 /* CRUDExpense.swift */,
 				FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */,
+				FEE16FE82422CA2E00F00609 /* SnapShotExtensions.swift */,
+				FEE16FE42422C37500F00609 /* FireBaseCollectionReference.swift */,
+				FEE16FE62422C55C00F00609 /* EncodableExtension.swift */,
 				FEE16FD42421900600F00609 /* NSUIColor+Hex.swift */,
 				FE450A0524201FAF00485782 /* Main.storyboard */,
 				FE450A0824201FB100485782 /* Assets.xcassets */,
@@ -228,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE16FE52422C37500F00609 /* FireBaseCollectionReference.swift in Sources */,
 				FE450A0424201FAF00485782 /* ViewController.swift in Sources */,
 				FEE16FE32422BE7200F00609 /* FireBaseFireStoreService.swift in Sources */,
+				FEE16FE92422CA2E00F00609 /* SnapShotExtensions.swift in Sources */,
 				FEE16FDB2421C71700F00609 /* ExpensesViewController.swift in Sources */,
 				FEE16FD52421900600F00609 /* NSUIColor+Hex.swift in Sources */,
 				FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */,
@@ -237,6 +248,7 @@
 				FEE16FDD2421C86600F00609 /* Expenses.swift in Sources */,
 				FEE16FD92421C64D00F00609 /* PieChartViewController.swift in Sources */,
 				FE450A0224201FAF00485782 /* SceneDelegate.swift in Sources */,
+				FEE16FE72422C55D00F00609 /* EncodableExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
