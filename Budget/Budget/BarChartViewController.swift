@@ -1,8 +1,8 @@
 //
-//  PieChartViewController.swift
+//  BarChartViewController.swift
 //  Budget
 //
-//  Created by Mark Kim on 3/17/20.
+//  Created by Mark Kim on 3/20/20.
 //  Copyright © 2020 Mark Kim. All rights reserved.
 //
 
@@ -11,11 +11,12 @@ import Charts
 import Firebase
 import FirebaseFirestoreSwift
 
-class PieChartViewController: UIViewController, UITabBarControllerDelegate {
-
-    @IBOutlet weak var pieView: PieChartView!
+class BarChartViewController: UIViewController, UITabBarControllerDelegate {
     
+    @IBOutlet weak var barView: BarChartView!
+        
     var expenses = [Expenses]()
+
     lazy var names = getExpenseNames()
     lazy var cost = getExpenseCosts()
 
@@ -42,23 +43,23 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
     }
     
     func customizeChart(names: [String], costs: [Double]) {
-        var dataEntries: [ChartDataEntry] = []
+        var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<names.count {
-            let dataEntry = PieChartDataEntry(value: costs[i], label: names[i], data: names[i] as AnyObject)
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(costs[i]), data: names[i] as String)
             dataEntries.append(dataEntry)
         }
+                
+        let barChartDataSet = BarChartDataSet(entries: dataEntries, label: nil)
+        barChartDataSet.colors = colorsOfCharts(numbersOfColor: names.count)
         
-        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
-        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: names.count)
-        
-        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let barChartData = BarChartData(dataSet: barChartDataSet)
         let format = NumberFormatter()
         format.numberStyle = .none
         let formatter = DefaultValueFormatter(formatter: format)
-        pieChartData.setValueFormatter(formatter)
+        barChartData.setValueFormatter(formatter)
         
-        pieView.data = pieChartData
+        barView.data = barChartData
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
@@ -84,10 +85,3 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
 }
-
-
-
-
-
-
-

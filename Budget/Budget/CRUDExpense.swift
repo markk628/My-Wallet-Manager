@@ -10,11 +10,8 @@ import Foundation
 import UIKit
 
 class CRUDExpense {
-    
     private init() {}
-    
     static func createExpense(in vc: UIViewController, completion: @escaping (Expenses) -> Void) {
-        
         let alert = UIAlertController(title: "Add Expense", message: nil, preferredStyle: .alert)
         
         alert.addTextField { (nameTF) in
@@ -41,14 +38,13 @@ class CRUDExpense {
     }
     
     static func updateExpense(_ expense: Expenses, in vc: UIViewController, completion: @escaping (Expenses) -> Void) {
-        
         let alert = UIAlertController(title: "Update \(expense.name)", message: nil, preferredStyle: .alert)
         
         alert.addTextField{ (costTF) in
             costTF.placeholder = "Cost"
             costTF.keyboardType = .numberPad
             costTF.text = String(expense.cost)
-    }
+        }
         
         let update = UIAlertAction(title: "Update", style: .default) { _ in
             guard
@@ -61,7 +57,6 @@ class CRUDExpense {
             
             completion(updatedExpense)
         }
-        
         alert.addAction(update)
         vc.present(alert, animated: true)
     }

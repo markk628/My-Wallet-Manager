@@ -11,8 +11,7 @@ import Firebase
 import FirebaseFirestore
 
 class FireBaseFireStoreService {
-    
-    private init() {}
+//    private init() {}
     static let shared = FireBaseFireStoreService()
         
     func configure() {
@@ -25,10 +24,8 @@ class FireBaseFireStoreService {
     
     func create<T: Encodable>(for encodableObject: T, in collectionReference: FireBaseCollectionReference) {
         do {
-            
             let json = try encodableObject.toJson(excluding: ["id"])
             reference(to: collectionReference).addDocument(data: json)
-            
         } catch {
             print(error)
         }
@@ -45,9 +42,7 @@ class FireBaseFireStoreService {
                     let object = try document.decode(as: objectType.self)
                     objects.append(object)
                 }
-                
                 completion(objects)
-                
             } catch {
                 print(error)
             }
@@ -55,7 +50,6 @@ class FireBaseFireStoreService {
     }
     
     func update<T: Encodable & Identifiable>(for encodableObject: T, in collectionReference: FireBaseCollectionReference) {
-        
         do {
             let json = try encodableObject.toJson(excluding: ["id"])
             guard let id = encodableObject.id else { throw MyError.encodingError }
@@ -64,7 +58,6 @@ class FireBaseFireStoreService {
         } catch {
             print(error)
         }
-        
     }
 
     func delete<T: Identifiable>(_ identifiableObject: T, in collectionReference: FireBaseCollectionReference) {

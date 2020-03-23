@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D7148A91B0D3FA41B5D75711 /* Pods_Budget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF496A2151EBDE8913257CE /* Pods_Budget.framework */; };
+		FE11C73224257016001D4F43 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11C73124257016001D4F43 /* BarChartViewController.swift */; };
+		FE11C73424259951001D4F43 /* budgetCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11C73324259951001D4F43 /* budgetCalculator.swift */; };
 		FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4509FF24201FAF00485782 /* AppDelegate.swift */; };
 		FE450A0224201FAF00485782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0124201FAF00485782 /* SceneDelegate.swift */; };
 		FE450A0424201FAF00485782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0324201FAF00485782 /* ViewController.swift */; };
@@ -15,7 +17,6 @@
 		FE450A0924201FB100485782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0824201FB100485782 /* Assets.xcassets */; };
 		FE450A0C24201FB100485782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0A24201FB100485782 /* LaunchScreen.storyboard */; };
 		FE450A16242022B300485782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE450A15242022B300485782 /* GoogleService-Info.plist */; };
-		FEE16FD52421900600F00609 /* NSUIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FD42421900600F00609 /* NSUIColor+Hex.swift */; };
 		FEE16FD92421C64D00F00609 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FD82421C64D00F00609 /* PieChartViewController.swift */; };
 		FEE16FDB2421C71700F00609 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */; };
 		FEE16FDD2421C86600F00609 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE16FDC2421C86600F00609 /* Expenses.swift */; };
@@ -30,6 +31,8 @@
 		0BF4B6001034AAABB6A7DBFC /* Pods-Budget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget.release.xcconfig"; path = "Target Support Files/Pods-Budget/Pods-Budget.release.xcconfig"; sourceTree = "<group>"; };
 		5AF496A2151EBDE8913257CE /* Pods_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE5B448AFAB613385961961 /* Pods-Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget.debug.xcconfig"; path = "Target Support Files/Pods-Budget/Pods-Budget.debug.xcconfig"; sourceTree = "<group>"; };
+		FE11C73124257016001D4F43 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		FE11C73324259951001D4F43 /* budgetCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = budgetCalculator.swift; sourceTree = "<group>"; };
 		FE4509FC24201FAF00485782 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4509FF24201FAF00485782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE450A0124201FAF00485782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +42,6 @@
 		FE450A0B24201FB100485782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE450A0D24201FB100485782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE450A15242022B300485782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FEE16FD42421900600F00609 /* NSUIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUIColor+Hex.swift"; sourceTree = "<group>"; };
 		FEE16FD82421C64D00F00609 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		FEE16FDC2421C86600F00609 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
@@ -105,6 +107,8 @@
 				FE450A15242022B300485782 /* GoogleService-Info.plist */,
 				FE450A0324201FAF00485782 /* ViewController.swift */,
 				FEE16FD82421C64D00F00609 /* PieChartViewController.swift */,
+				FE11C73124257016001D4F43 /* BarChartViewController.swift */,
+				FE11C73324259951001D4F43 /* budgetCalculator.swift */,
 				FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */,
 				FEE16FDC2421C86600F00609 /* Expenses.swift */,
 				FEE16FE02421CAE500F00609 /* CRUDExpense.swift */,
@@ -112,7 +116,6 @@
 				FEE16FE82422CA2E00F00609 /* SnapShotExtensions.swift */,
 				FEE16FE42422C37500F00609 /* FireBaseCollectionReference.swift */,
 				FEE16FE62422C55C00F00609 /* EncodableExtension.swift */,
-				FEE16FD42421900600F00609 /* NSUIColor+Hex.swift */,
 				FE450A0524201FAF00485782 /* Main.storyboard */,
 				FE450A0824201FB100485782 /* Assets.xcassets */,
 				FE450A0A24201FB100485782 /* LaunchScreen.storyboard */,
@@ -240,9 +243,10 @@
 				FEE16FE52422C37500F00609 /* FireBaseCollectionReference.swift in Sources */,
 				FE450A0424201FAF00485782 /* ViewController.swift in Sources */,
 				FEE16FE32422BE7200F00609 /* FireBaseFireStoreService.swift in Sources */,
+				FE11C73224257016001D4F43 /* BarChartViewController.swift in Sources */,
+				FE11C73424259951001D4F43 /* budgetCalculator.swift in Sources */,
 				FEE16FE92422CA2E00F00609 /* SnapShotExtensions.swift in Sources */,
 				FEE16FDB2421C71700F00609 /* ExpensesViewController.swift in Sources */,
-				FEE16FD52421900600F00609 /* NSUIColor+Hex.swift in Sources */,
 				FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */,
 				FEE16FE12421CAE500F00609 /* CRUDExpense.swift in Sources */,
 				FEE16FDD2421C86600F00609 /* Expenses.swift in Sources */,

@@ -7,14 +7,12 @@
 //
 
 import Foundation
-import Charts
 
 protocol Identifiable {
     var id: String? { get set }
 }
 
 struct Expenses: Codable, Identifiable {
-    
     var id: String? = nil
     let name: String
     var cost: Int

@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         } else {
             Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                 if error == nil {
+                    self.statusLabel.text = "Hello"
                     self.performSegue(withIdentifier: "loggedIn", sender: self)
                 } else {
                     self.statusLabel.text = "Incorrect Email/Password"

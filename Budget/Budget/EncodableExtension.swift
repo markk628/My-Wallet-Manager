@@ -13,7 +13,6 @@ enum MyError: Error {
 }
 
 extension Encodable {
-    
     func toJson(excluding keys: [String] = [String]()) throws -> [String: Any] {
         
         let objectData = try JSONEncoder().encode(self)
@@ -21,11 +20,9 @@ extension Encodable {
         
         guard var json = JsonObject as? [String: Any] else { throw MyError.encodingError }
         
-        
         for key in keys {
             json[key] = nil
         }
-        
         return json
     }
 }
