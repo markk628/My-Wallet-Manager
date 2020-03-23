@@ -18,7 +18,7 @@ Make a budget for the month
 
 ## Challenges I Anticipate
 
-Making a working pie chart
+Making working charts
 Making sure the math adds up for the budget
 
 ## Skateboard
@@ -36,7 +36,7 @@ Login feature
 
 ## Personal Achievement Goals:
 
-1. Make a working pie chart
+1. Make working charts
 1. Implement working math to calculate budget
 
 ## References
