@@ -12,7 +12,7 @@
 		FE11C73424259951001D4F43 /* budgetCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11C73324259951001D4F43 /* budgetCalculator.swift */; };
 		FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4509FF24201FAF00485782 /* AppDelegate.swift */; };
 		FE450A0224201FAF00485782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0124201FAF00485782 /* SceneDelegate.swift */; };
-		FE450A0424201FAF00485782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0324201FAF00485782 /* ViewController.swift */; };
+		FE450A0424201FAF00485782 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0324201FAF00485782 /* LoginViewController.swift */; };
 		FE450A0724201FAF00485782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0524201FAF00485782 /* Main.storyboard */; };
 		FE450A0924201FB100485782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0824201FB100485782 /* Assets.xcassets */; };
 		FE450A0C24201FB100485782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0A24201FB100485782 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 		FE4509FC24201FAF00485782 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4509FF24201FAF00485782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE450A0124201FAF00485782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE450A0324201FAF00485782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE450A0324201FAF00485782 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE450A0624201FAF00485782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE450A0824201FB100485782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE450A0B24201FB100485782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 				FE4509FF24201FAF00485782 /* AppDelegate.swift */,
 				FE450A0124201FAF00485782 /* SceneDelegate.swift */,
 				FE450A15242022B300485782 /* GoogleService-Info.plist */,
-				FE450A0324201FAF00485782 /* ViewController.swift */,
+				FE450A0324201FAF00485782 /* LoginViewController.swift */,
 				FEE16FD82421C64D00F00609 /* PieChartViewController.swift */,
 				FE11C73124257016001D4F43 /* BarChartViewController.swift */,
 				FE11C73324259951001D4F43 /* budgetCalculator.swift */,
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE16FE52422C37500F00609 /* FireBaseCollectionReference.swift in Sources */,
-				FE450A0424201FAF00485782 /* ViewController.swift in Sources */,
+				FE450A0424201FAF00485782 /* LoginViewController.swift in Sources */,
 				FEE16FE32422BE7200F00609 /* FireBaseFireStoreService.swift in Sources */,
 				FE11C73224257016001D4F43 /* BarChartViewController.swift in Sources */,
 				FE11C73424259951001D4F43 /* budgetCalculator.swift in Sources */,
@@ -398,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26PJ89TRRV;
 				INFOPLIST_FILE = Budget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26PJ89TRRV;
 				INFOPLIST_FILE = Budget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
