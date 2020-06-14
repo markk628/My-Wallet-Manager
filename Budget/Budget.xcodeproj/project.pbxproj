@@ -13,7 +13,6 @@
 		FE450A0024201FAF00485782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4509FF24201FAF00485782 /* AppDelegate.swift */; };
 		FE450A0224201FAF00485782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0124201FAF00485782 /* SceneDelegate.swift */; };
 		FE450A0424201FAF00485782 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE450A0324201FAF00485782 /* LoginViewController.swift */; };
-		FE450A0724201FAF00485782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0524201FAF00485782 /* Main.storyboard */; };
 		FE450A0924201FB100485782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0824201FB100485782 /* Assets.xcassets */; };
 		FE450A0C24201FB100485782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE450A0A24201FB100485782 /* LaunchScreen.storyboard */; };
 		FE450A16242022B300485782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE450A15242022B300485782 /* GoogleService-Info.plist */; };
@@ -37,7 +36,6 @@
 		FE4509FF24201FAF00485782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE450A0124201FAF00485782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FE450A0324201FAF00485782 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		FE450A0624201FAF00485782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE450A0824201FB100485782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE450A0B24201FB100485782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE450A0D24201FB100485782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,26 +100,49 @@
 		FE4509FE24201FAF00485782 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				FE96FB0F2496A9BE0007858B /* Model */,
+				FE96FB0E2496A9B90007858B /* View */,
+				FE96FB0D2496A9B40007858B /* Controller */,
 				FE4509FF24201FAF00485782 /* AppDelegate.swift */,
 				FE450A0124201FAF00485782 /* SceneDelegate.swift */,
+				FE450A0824201FB100485782 /* Assets.xcassets */,
+				FE450A0A24201FB100485782 /* LaunchScreen.storyboard */,
+				FE450A0D24201FB100485782 /* Info.plist */,
 				FE450A15242022B300485782 /* GoogleService-Info.plist */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		FE96FB0D2496A9B40007858B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				FE450A0324201FAF00485782 /* LoginViewController.swift */,
 				FEE16FD82421C64D00F00609 /* PieChartViewController.swift */,
 				FE11C73124257016001D4F43 /* BarChartViewController.swift */,
-				FE11C73324259951001D4F43 /* budgetCalculator.swift */,
 				FEE16FDA2421C71700F00609 /* ExpensesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE96FB0E2496A9B90007858B /* View */ = {
+			isa = PBXGroup;
+			children = (
 				FEE16FDC2421C86600F00609 /* Expenses.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE96FB0F2496A9BE0007858B /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				FEE16FE02421CAE500F00609 /* CRUDExpense.swift */,
 				FEE16FE22422BE7200F00609 /* FireBaseFireStoreService.swift */,
 				FEE16FE82422CA2E00F00609 /* SnapShotExtensions.swift */,
 				FEE16FE42422C37500F00609 /* FireBaseCollectionReference.swift */,
 				FEE16FE62422C55C00F00609 /* EncodableExtension.swift */,
-				FE450A0524201FAF00485782 /* Main.storyboard */,
-				FE450A0824201FB100485782 /* Assets.xcassets */,
-				FE450A0A24201FB100485782 /* LaunchScreen.storyboard */,
-				FE450A0D24201FB100485782 /* Info.plist */,
+				FE11C73324259951001D4F43 /* budgetCalculator.swift */,
 			);
-			path = Budget;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +208,6 @@
 				FE450A0C24201FB100485782 /* LaunchScreen.storyboard in Resources */,
 				FE450A16242022B300485782 /* GoogleService-Info.plist in Resources */,
 				FE450A0924201FB100485782 /* Assets.xcassets in Resources */,
-				FE450A0724201FAF00485782 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,14 +279,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE450A0524201FAF00485782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE450A0624201FAF00485782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FE450A0A24201FB100485782 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

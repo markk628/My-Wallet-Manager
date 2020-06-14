@@ -13,8 +13,16 @@ class ExpenseViewController: UITableViewController {
     
     var expenses = [Expenses]()
     
+    let addExpenseBarButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem()
+        barButton.image = .add
+        barButton.action = #selector(ExpenseViewController.addTapped)
+        return barButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setRightBarButton(addExpenseBarButton, animated: true)
         
         FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
             self.expenses = expenses
@@ -22,7 +30,7 @@ class ExpenseViewController: UITableViewController {
         }
     }
     
-    @IBAction func addTapped() {
+    @objc func addTapped() {
         CRUDExpense.createExpense(in: self) { expense in
             FireBaseFireStoreService.shared.create(for: expense, in: .expenses)
         }

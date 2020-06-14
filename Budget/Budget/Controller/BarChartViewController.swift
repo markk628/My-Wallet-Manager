@@ -13,32 +13,55 @@ import FirebaseFirestoreSwift
 
 class BarChartViewController: UIViewController, UITabBarControllerDelegate {
     
-    @IBOutlet weak var barView: BarChartView!
+//    @IBOutlet weak var barView: BarChartView!
         
     var expenses = [Expenses]()
 
     lazy var names = getExpenseNames()
     lazy var cost = getExpenseCosts()
+    
+    let barView: BarChartView = {
+        let bar = BarChartView()
+        bar.translatesAutoresizingMaskIntoConstraints = false
+        return bar
+    }()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpBarChartVC()
+        
+        FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
+            self.expenses = expenses
+            self.customizeChart(names: self.names, costs: self.cost.map{ Double($0) })
+        }
+    }
+    
+    func setUpBarChartVC() {
+        view.addSubview(barView)
+        
+        NSLayoutConstraint.activate([
+            barView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            barView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            barView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            barView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
     func getExpenseNames() -> [String] {
         var expensesNames: [String] = []
         
         for expense in expenses {
             expensesNames.append(expense.name)
         }
-//        expensesNames.append("Free")
         return expensesNames
     }
 
     func getExpenseCosts() -> [Double] {
         var expensesCosts: [Double] = []
-//        let freeAmount = CalculateBudget()
-//        freeAmount.calculateBudget()
         
         for expense in expenses {
             expensesCosts.append(Double(expense.cost))
         }
-//        expensesCosts.append(freeAmount.calculateBudget())
         return expensesCosts
     }
     
@@ -72,16 +95,5 @@ class BarChartViewController: UIViewController, UITabBarControllerDelegate {
             colors.append(color)
         }
         return colors
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        let freeAmount = CalculateBudget()
-//        freeAmount.calculateBudget()
-        
-        FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
-            self.expenses = expenses
-            self.customizeChart(names: self.names, costs: self.cost.map{ Double($0) })
-        }
     }
 }

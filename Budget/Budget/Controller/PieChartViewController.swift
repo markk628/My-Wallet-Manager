@@ -13,11 +13,38 @@ import FirebaseFirestoreSwift
 
 class PieChartViewController: UIViewController, UITabBarControllerDelegate {
 
-    @IBOutlet weak var pieView: PieChartView!
+//    @IBOutlet weak var pieView: PieChartView!
     
     var expenses = [Expenses]()
     lazy var names = getExpenseNames()
     lazy var cost = getExpenseCosts()
+    
+    let pieView: PieChartView = {
+        let pie = PieChartView()
+        pie.translatesAutoresizingMaskIntoConstraints = false
+        return pie
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpPieChartVC()
+
+        FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
+            self.expenses = expenses
+            self.customizeChart(names: self.names, costs: self.cost.map{ Double($0) })
+        }
+    }
+    
+    func setUpPieChartVC() {
+        view.addSubview(pieView)
+        
+        NSLayoutConstraint.activate([
+            pieView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            pieView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            pieView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            pieView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
 
     func getExpenseNames() -> [String] {
         var expensesNames: [String] = []
@@ -25,19 +52,15 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
         for expense in expenses {
             expensesNames.append(expense.name)
         }
-//        expensesNames.append("Free")
         return expensesNames
     }
 
     func getExpenseCosts() -> [Double] {
         var expensesCosts: [Double] = []
-//        let freeAmount = CalculateBudget()
-//        freeAmount.calculateBudget()
         
         for expense in expenses {
             expensesCosts.append(Double(expense.cost))
         }
-//        expensesCosts.append(freeAmount.calculateBudget())
         return expensesCosts
     }
     
@@ -71,17 +94,6 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
             colors.append(color)
         }
         return colors
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        let freeAmount = CalculateBudget()
-//        freeAmount.calculateBudget()
-        
-        FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
-            self.expenses = expenses
-            self.customizeChart(names: self.names, costs: self.cost.map{ Double($0) })
-        }
     }
 }
 
