@@ -22,7 +22,6 @@ class ExpenseViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setRightBarButton(addExpenseBarButton, animated: true)
         
         FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
             self.expenses = expenses
@@ -45,7 +44,7 @@ class ExpenseViewController: UITableViewController {
         let expense = expenses[indexPath.row]
         
         cell.textLabel?.text = expense.name
-        cell.detailTextLabel?.text = String(expense.cost)
+        cell.detailTextLabel?.text = "$\(expense.cost)"
         
         return cell
     }

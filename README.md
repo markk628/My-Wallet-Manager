@@ -1,58 +1,27 @@
 Dates 3/16-3/25
+# My Wallet Manager
+An iOS app that shows a visual representation of the user’s monthly expenses
 
-Mark Kim 
+## Demo
 
+## Tools
 
-Budget
-
-
-New
-
-
-Solo
-
-
-## Description
-
-Make a budget for the month
-
-## Challenges I Anticipate
-
-Making working charts
-Making sure the math adds up for the budget
-
-## Skateboard
-
-User is able to create budget
-User is able to add expenses
-
-## Bike
-
-Do the math to show it in the pie chart
-
-## Car
-
-Login feature
-
-## Personal Achievement Goals:
-
-1. Make working charts
-1. Implement working math to calculate budget
+* Firebase
+* Cloud Firestore
+* Charts Pod
+* Handy Dandy Youtube and Google
 
 ## References
 
 I want to give a big thanks to these Youtubers 🦾
-*The Gadget Book
-*IOSTutor
-*Seemu Apps
-*Sean Allen
-*Kilo Loco
-*Jared Davidson
+* The Gadget Book
+* IOSTutor
+* Seemu Apps
+* Sean Allen
+* Kilo Loco
+* Jared Davidson
 
 Websites
-*iOS App Templates
+* iOS App Templates
 
-**Mark Kim                
 > Mark Kim / 03/16/20
-Adriana Gonzalez
-> TBD

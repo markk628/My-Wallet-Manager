@@ -13,8 +13,6 @@ import FirebaseFirestoreSwift
 
 class BarChartViewController: UIViewController, UITabBarControllerDelegate {
     
-//    @IBOutlet weak var barView: BarChartView!
-        
     var expenses = [Expenses]()
 
     lazy var names = getExpenseNames()
@@ -29,6 +27,7 @@ class BarChartViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBarChartVC()
+        view.backgroundColor = .white
         
         FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
             self.expenses = expenses
@@ -78,7 +77,7 @@ class BarChartViewController: UIViewController, UITabBarControllerDelegate {
         
         let barChartData = BarChartData(dataSet: barChartDataSet)
         let format = NumberFormatter()
-        format.numberStyle = .none
+        format.numberStyle = .currency
         let formatter = DefaultValueFormatter(formatter: format)
         barChartData.setValueFormatter(formatter)
         

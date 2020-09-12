@@ -12,10 +12,9 @@ import Firebase
 import FirebaseFirestoreSwift
 
 class PieChartViewController: UIViewController, UITabBarControllerDelegate {
-
-//    @IBOutlet weak var pieView: PieChartView!
     
     var expenses = [Expenses]()
+    
     lazy var names = getExpenseNames()
     lazy var cost = getExpenseCosts()
     
@@ -28,7 +27,8 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpPieChartVC()
-
+        view.backgroundColor = .white
+        
         FireBaseFireStoreService.shared.read(from: .expenses, returning: Expenses.self) { (expenses) in
             self.expenses = expenses
             self.customizeChart(names: self.names, costs: self.cost.map{ Double($0) })
@@ -57,7 +57,7 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
 
     func getExpenseCosts() -> [Double] {
         var expensesCosts: [Double] = []
-        
+
         for expense in expenses {
             expensesCosts.append(Double(expense.cost))
         }
@@ -77,7 +77,7 @@ class PieChartViewController: UIViewController, UITabBarControllerDelegate {
         
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         let format = NumberFormatter()
-        format.numberStyle = .none
+        format.numberStyle = .currency
         let formatter = DefaultValueFormatter(formatter: format)
         pieChartData.setValueFormatter(formatter)
         
