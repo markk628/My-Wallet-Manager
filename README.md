@@ -3,12 +3,13 @@ Dates 3/16-3/25
 An iOS app that shows a visual representation of the user’s monthly expenses
 
 ## Demo
-Login and Sign up\n
-<img src="static/WMLogin.gif" width = "200">
-
+Login and Sign up
+<br />
+![](static/WMLogin.gif)
 ![](static/WMSignup.gif)
-
-Saving expenses\n
+<br />
+Saving expenses
+<br />
 ![](static/WMDemo.gif)
 
 
