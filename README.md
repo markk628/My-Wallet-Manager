@@ -5,15 +5,9 @@ An iOS app that shows a visual representation of the user’s monthly expenses
 ## Demo
 
 ### Login and Sign up
-
-<br />
 ![](static/WMLogin.gif)
 ![](static/WMSignup.gif)
-<br />
-
 ### Saving expenses and Rendering Charts
-
-<br />
 ![](static/WMDemo.gif)
 
 
