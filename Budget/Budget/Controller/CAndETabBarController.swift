@@ -9,6 +9,20 @@
 import UIKit
 
 class CAndETabBarController: UITabBarController, UITabBarControllerDelegate {
+    
+    private let chartsTabBarItem: UITabBarItem = {
+        let tabBarItem = UITabBarItem()
+        tabBarItem.image = UIImage(systemName: "chart.pie")
+        tabBarItem.title = "Charts"
+        return tabBarItem
+    }()
+    
+    private let expensesTabBarItem: UITabBarItem = {
+        let tabBarItem = UITabBarItem()
+        tabBarItem.image = UIImage(systemName: "dollarsign.square")
+        tabBarItem.title = "Expenses"
+        return tabBarItem
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +37,8 @@ class CAndETabBarController: UITabBarController, UITabBarControllerDelegate {
         let viewControllerClasses = [ChartsViewController(), ExpenseViewController()]
         let titles = ["Charts", "Expenses"]
         let tabBarIcons = [
-            UITabBarItem(tabBarSystemItem: .featured, tag: 0),
-            UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1),
+            chartsTabBarItem,
+            expensesTabBarItem
         ]
         
         for i in 0..<viewControllerClasses.count {
