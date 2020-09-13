@@ -15,12 +15,12 @@ An iOS app that shows a visual representation of the user’s monthly expenses
 ## Tools
 * Firebase
 * Cloud Firestore
-* Charts Pod
+* [Charts Pod](https://cocoapods.org/pods/Charts)
 * Handy Dandy Youtube and Google
 ## References
 I want to give a big thanks to these Youtubers 🦾
 * The Gadget Book
-* IOSTutor
+* iOSTutor
 * Seemu Apps
 * Sean Allen
 * Kilo Loco
